@@ -222,3 +222,25 @@
      tipul.
    GREȘEALĂ FRECVENTĂ: Scrii typeof "40" și te miri că iese string: ghilimelele fac din
      cifre un text. */
+
+    // Variabile pentru Meetup
+    let numeMeetup = "Meetup JS";
+    let ziMeetup = "Vineri";
+    let oraMeetup = "18:00";
+    let pretMeetup = 0;
+    let locuriMeetup = 30;
+    let inscrisiMeetup = 12;
+
+    // Locuri libere calculate cu operator
+    let locuriRamaseMeetup = locuriMeetup - inscrisiMeetup;
+    
+    // Afișare nume meetup
+    console.log(numeMeetup);
+
+    // Afișare locuri libere cu concatenare
+    console.log("Locuri libere: " + locuriRamaseMeetup);
+    
+    // typeof pe trei variabile
+    console.log(typeof numeMeetup);
+    console.log(typeof locuriRamaseMeetup);
+    console.log(typeof (pretMeetup === 0));
