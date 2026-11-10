@@ -294,3 +294,31 @@ else {
      raportEveniment("Concert", 100, 100, 35).
    GREȘEALĂ FRECVENTĂ: Pui let total = 0; în interiorul buclei: la fiecare tură total revine
      la 0 și toate rândurile arată același preț. */
+
+     function raportEveniment(nume, locuriTotale, locuriOcupate, pret) {
+
+      // Calculăm locurile libere
+      let locuriLibere = locuriTotale - locuriOcupate;
+
+      // Afișăm starea evenimentului
+      if (locuriLibere === 0) {
+        console.log(nume + ": Plin");
+      } else if (locuriLibere <= 5) {
+        console.log(nume + ": Ultimele locuri");
+      } else {
+        console.log(nume + ": Locuri libere");
+      }
+
+      // Afișăm totalul pentru 1, 2 și 3 bilete
+      let total = 0;
+      for (let i = 1; i <= 3; i++) {
+        total = total + pret;
+        console.log("Bilete: " + i + ", total: " + total);
+      }
+     }
+
+     // Apel 1: eveniment cu locuri libere
+     raportEveniment("Hackathon", 40, 28, 40);
+
+     // Apel 2: eveniment plin
+     raportEveniment("Concert", 100, 100, 35);
